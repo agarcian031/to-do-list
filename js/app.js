@@ -10,7 +10,7 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough"; 
 
 // ADD ITEMS TO VARIABLES 
-let LIST, id; 
+let LIST = [], id = 0; 
 
 
 //SHOW TODAYS DATE 
@@ -45,7 +45,15 @@ document.addEventListener("keyup", function(even){
 
         //IF THE INPUT IS !EMPTY 
         if(toDo){
-            addToDo(toDo); 
+            addToDo(toDo, id, false, false);
+            
+            LIST.push({
+                name : toDo,  
+                id : id, 
+                done : false,
+                trash : false 
+            }); 
+            id++; 
         }
         input.value = ""; 
     }
