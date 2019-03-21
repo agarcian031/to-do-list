@@ -59,4 +59,11 @@ document.addEventListener("keyup", function(even){
     }
 }); 
 
-addToDo("coffee", 1, false, true); 
+// COMPLETE TODO FUNCTION - if user checks/unchecks circle
+function completeToDo(element){
+    element.classList.toggle(CHECK); 
+    element.classList.toggle(UNCHECK); 
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH); 
+
+    LIST[element.id].done = LIST[element.id].done ? false : true; 
+}
