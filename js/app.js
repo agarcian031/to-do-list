@@ -9,6 +9,10 @@ const CHECK = "fa-check-circle";
 const UNCHECK = "fa-circle-thin"; 
 const LINE_THROUGH = "lineThrough"; 
 
+// ADD ITEMS TO VARIABLES 
+let LIST, id; 
+
+
 //SHOW TODAYS DATE 
 const options = {weekday:"long", month:"short", day:"numeric"}; 
 const today = new Date(); 
@@ -47,4 +51,4 @@ document.addEventListener("keyup", function(even){
     }
 }); 
 
-addToDo("coffee", 1, true, false); 
+addToDo("coffee", 1, false, true); 
