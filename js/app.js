@@ -10,7 +10,29 @@ const UNCHECK = "fa-circle-thin";
 const LINE_THROUGH = "lineThrough"; 
 
 // ADD ITEMS TO VARIABLES 
-let LIST = [], id = 0; 
+let LIST, id = 0; 
+
+// GET ITEM TO LOCALSTORAGE
+let data = localStorage.getItem("TODO");
+
+// CHECK IF DATA OR VAR IS NOT EMPTY
+if(data) {
+    LIST = JSON.parse(data); 
+    id = LIST.length; // set the id to the last on in the list 
+    loadList(LIST); //load the list to the user interface
+} else {
+    //if data isn't empty 
+    LIST = []; 
+    id = 0; 
+}
+
+// LOAD ITEMS TO THE USERS INTERFACE 
+function loadList(array){
+    array.forEach(function(item){
+        addToDo(item.name, item.id, item.done, item.trash); 
+    }); 
+}
+
 
 
 //SHOW TODAYS DATE 
@@ -53,6 +75,8 @@ document.addEventListener("keyup", function(even){
                 done : false,
                 trash : false 
             }); 
+            // ADD ITEM TO LOCALSTORAGE 
+        localStorage.setItem("TODO", JSON.stringify(LIST)); 
             id++; 
         }
         input.value = ""; 
@@ -74,3 +98,18 @@ function removeToDo(element) {
 
     LIST[element.id].trash = true; 
 }
+
+// TARGET THE ITEMS CREATED DYNAMICALLY 
+list.addEventListener("click", function(event){
+    const element = event.target; //return the clicked element inside list
+    const elementJob = element.attributes.job.value; //complete or delete 
+
+    if(elementJob == "complete"){
+        completeToDo(element); 
+        
+    } else if (elementJob == "delete"){
+        removeToDo(element); 
+    }; 
+    // ADD ITEM TO LOCALSTORAGE 
+    localStorage.setItem("TODO", JSON.stringify(LIST)); 
+}); 
