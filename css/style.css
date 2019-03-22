@@ -1,28 +1,35 @@
-/* ------------ youtube.com/CodeExplained ------------ */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 body{
     padding: 0;
     margin: 0;
     background-color: rgba(0,0,0,0.1);
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
+    font-weight: bold; 
 }
 
 /* ------------ container ------------ */
-.container{
-    padding:10px;
+
+
+ .container{
+    padding:30px;
     width:380px;
-    margin:0 auto;
+    margin: 250px auto; 
 }
 
 /* ------------ header ------------ */
 .header{
     width: 380px;
     height:200px;
-    background-image: url('../img/bg2.jpg');
-    background-size: 100% 200%;
+    background-image: url('../img/pattern.png');
+    background-size: 180% 180%;
     background-repeat: no-repeat;
     border-radius: 15px 15px 0 0;
+    border-style: outset; 
+    border-width: 6px;
+    border-color: rgb(114, 140, 140); 
+
     position: relative;
-}
+} 
 .clear{
     width : 30px;
     height: 30px;
@@ -45,7 +52,8 @@ body{
     left: 10px;
     color: #FFF;
     font-size: 25px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
+    font-weight: bold;
 }
 
 /* ------------ content ------------ */
@@ -55,6 +63,10 @@ body{
     max-height:350px;
     background-color: #FFF;
     overflow: auto;
+    border-style: outset; 
+    border-width: 6px; 
+    border-color: rgb(114, 140, 140); 
+
 }
 .content::-webkit-scrollbar { 
     display: none; 
@@ -118,6 +130,9 @@ body{
     background-color: #FFF;
     padding: 10px;
     border-top: 1px solid rgba(0,0,0,0.1);
+    border-style: outset; 
+    border-width: 6px; 
+    border-color: rgb(114, 140, 140); 
 }
 .add-to-do i{
     position: absolute;
@@ -137,23 +152,27 @@ body{
 }
 .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #4162f6;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 20px;
+    font-weight: bold;
 }
 .add-to-do input::-moz-placeholder { /* Firefox 19+ */
     color: #4162f6;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 20px;
+    font-weight: bold;
 }
 .add-to-do input:-ms-input-placeholder { /* IE 10+ */
     color: #4162f6;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 20px;
+    font-weight: bold;
 }
 .add-to-do input:-moz-placeholder { /* Firefox 18- */
     color: #4162f6;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 20px;
+    font-weight: bold;
 }
 
 
